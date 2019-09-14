@@ -1,17 +1,12 @@
 {
     "grant@enterprise.com": [
         {
-            "apiProducts": [
-                "weatherProduct"
-            ],
+            
             "callbackUrl": "http://weatherapp.com",
             "name": "grantoneapp",
             "scopes": []
         },
         {
-            "apiProducts": [
-                "weatherProduct"
-            ],
             "callbackUrl": "http://weatherapp.com",
             "name": "granttwoapp",
             "scopes": []
@@ -19,9 +14,6 @@
     ],
     "hugh@example.com": [
         {
-            "apiProducts": [
-                "weatherProduct"
-            ],
             "callbackUrl": "http://weatherapp.com",
             "name": "hughapp",
             "scopes": []

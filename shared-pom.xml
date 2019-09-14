@@ -158,7 +158,7 @@
             <id>weu</id>
             <properties>
                 <apigee.profile>weu</apigee.profile>
-                <apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+                <apigee.hosturl>https://weu.apigee.com</apigee.hosturl>
                 <apigee.apiversion>v1</apigee.apiversion>
                 <apigee.org>${org}</apigee.org>
                 <apigee.env>${env}</apigee.env>
