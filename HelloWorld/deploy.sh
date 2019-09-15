@@ -248,6 +248,10 @@ if [ "$apigee_options" == "validate" ]; then
 fi
 
 if [ "$apigee_options" == "override" ]; then
+    if [ "$overrideDelay" == "" ]; then
+        echo "Override delay is required with this 'override' option"
+        exit 1
+    fi
     mvn clean install -Dorg=$apigee_org -Denv=$apigee_env \
         -Dapigee.options=override -Dapigee.config.options=$apigee_config_options \
         -Dapigee.override.delay=$overrideDelay \
