@@ -10,6 +10,37 @@ mvn clean install -Dusername=<username> -Dpassword=<password> -Dorg=<orgName> \
 
 ```
 
+# Publishing to Nexus
+1.  Update the settings.xml of maven to add nexus credentials.
+    1.  path to settings.xml is `<maven installation dir>/conf/settings.xml`
+add below lines in settings.xml in `<servers>` tag.
+
+``` xml
+<server>
+    <id>nexus-apigee</id>
+    <username>username of nexus repository</username>
+    <password>password of nexus repository</password>
+</server>
+```
+
+2. For uploading to Nexus repository use below maven command
+
+```
+mvn deploy:deploy-file \
+  -DpomFile=pom.xml \
+  -Dpackaging=zip \
+  -Dfile=target/ATHelloWorld-1.0.zip \
+  -DrepositoryId=nexus-apigee \
+  -Durl=http://localhost:8081/repository/apigee
+
+```
+* `pomFile` This parameter should be used for giving location of pom file
+* `packaging` This parameter defines what is the packaging type of bundle. User `zip` in this case.
+* `file` parameter is used to define bundle path
+* `repositoryId` use this to provide credential id which are defined in your settings.xml
+* `url` parameter is used to give the location of nexus repository.
+
+
 This script checks for existance of organization, environment and few other checks as well.
 * Allows undeploy of a revision
 * Allows deleting of a proxy
