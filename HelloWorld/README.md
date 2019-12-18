@@ -28,7 +28,7 @@ add below lines in settings.xml in `<servers>` tag.
 ```
 mvn deploy:deploy-file \
   -DpomFile=pom.xml \
-  -Dpackaging=zip \
+  -Dpackaging=pom \
   -Dfile=target/ATHelloWorld-1.0.zip \
   -DrepositoryId=nexus-apigee \
   -Durl=http://localhost:8081/repository/apigee

@@ -3,9 +3,7 @@
     <Description/>
     <PreFlow>
         <Request>
-            <Step>
-                <Name>VerifyAPIKey</Name>
-            </Step>
+            
             <Step>
                 <Name>ResponseCache</Name>
             </Step>
@@ -18,11 +16,11 @@
     </PreFlow>
     <Flows/>
     <HTTPProxyConnection>
-        <BasePath>/v1/world/greetings</BasePath>
+        <BasePath>/v1/httpbin</BasePath>
         <VirtualHost>default</VirtualHost>
         <VirtualHost>secure</VirtualHost>
     </HTTPProxyConnection>
-    <RouteRule name="default">
-        <TargetEndpoint>default</TargetEndpoint>
+    <RouteRule name="httpbin">
+        <TargetEndpoint>httpbin</TargetEndpoint>
     </RouteRule>
 </ProxyEndpoint>

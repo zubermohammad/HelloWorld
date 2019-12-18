@@ -6,6 +6,7 @@
         <Prefix/>
         <KeyFragment ref="request.uri" type="string"/>
     </CacheKey>
+    <!-- Create a cache in edgeConfig.json at environment level by this name -->
     <CacheResource>echocache</CacheResource>
     <Scope>Exclusive</Scope>
 </ResponseCache>

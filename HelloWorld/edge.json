@@ -1,0 +1,42 @@
+{
+    "version": "1.0",
+    "envConfig": {
+        "test": {
+            "targetServers": [
+                {
+                    "name": "HTTPBin",
+                    "host": "httpbin.org",
+                    "isEnabled": true,
+                    "port": 80
+                }
+            ],
+            "caches": [
+                {
+                    "name": "echocache",
+                    "description": "echo cache",
+                    "expirySettings": {
+                        "timeoutInSec": {
+                            "value": "300"
+                        },
+                        "valuesNull": false
+                    }
+                }
+            ],
+            "kvms": [
+                {
+                    "name": "HTTPBin_Credentials",
+                    "entry": [
+                        {
+                            "name": "username",
+                            "value": "httpbin_johndoe"
+                        },
+                        {
+                            "name": "password",
+                            "value": "httbin_johnPasword"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

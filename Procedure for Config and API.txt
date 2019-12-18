@@ -1,0 +1,129 @@
+apiProxyName = "ATHelloWorld"
+productJson = Get API product information by calling GET PRODUCT MGMNT API
+if(productJson === null){
+
+
+    productJSON = {
+        "name" : "{name}",
+        "displayName": "{display_name}",
+        "approvalType": {"manual" or "auto"},
+        
+        "description": "{description}",
+        "apiResources": [ "{/resource1}", "{/resource2}"],
+        "environments": [ "{test}", "{prod}"],
+        "proxies": [apiProxyName],
+        "quota": "{quota}",
+        "quotaInterval": "{quota_interval}",
+        "quotaTimeUnit": "{quota_unit}",
+        "scopes": ["{scope1}", "{scope2}"]
+      }
+
+      Call create product management API using productJSON 
+
+          }      else{
+
+          
+    if( productJson.proxies.contains(apiProxyName) === -1){
+        productJSON.proxies.add(apiProxyName);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Admin Configurations
+    Separate project only containing environments and Organization related Configurations
+
+
+1.  Preconfigurations deployment &  Post Configuration deployments
+    (Environment, Organization)
+
+2.  SharedFlow deployments
+3.  API proxies deployment
+    (API Level)
+
+
+    gateway
+
+└── AT12345                   # ---- Team ----
+    ├── resources
+    │   └── edge.json         # Config that is shared across proxies in project
+    ├── env
+    │   └── test
+    │       ├── targetservers.json
+    │       ├── kvms.json
+    │       ├── caches.json
+    └── proxyname2
+        └── apiproxy
+            ├── config.json
+            ├── policies
+            ├── proxies
+            ├── proxyname2.xml
+            ├── resources
+            │   ├── java
+            │   ├── jsc
+            │   └── node
+            └── targets
+|___AT45678
+    ├── resources
+    │   └── edge.json         # Config that is shared across proxies in project
+    ├── proxyname1
+    │   └── apiproxy
+    │       ├── config.json
+    │       ├── policies
+    │       ├── proxies
+    │       ├── proxyname1.xml
+    │       ├── resources
+    │       │   ├── java
+    │       │   ├── jsc
+    │       │   └── node
+    │       └── targets
+    └── proxyname2
+        └── apiproxy
+            ├── config.json
+            ├── policies
+            ├── proxies
+            ├── proxyname2.xml
+            ├── resources
+            │   ├── java
+            │   ├── jsc
+            │   └── node
+            └── targets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
