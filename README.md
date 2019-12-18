@@ -1,6 +1,7 @@
-Setup nexus and maven conf in settings.xml
-copy this settings.xml to .m2 folder of Maven installation.
-Upload the shared-pom in nexus repository using below command.
+* Setup nexus and maven conf in settings.xml
+* Copy this settings.xml to .m2 folder of Maven installation.
+* Upload the shared-pom in nexus repository using below command.
+
 ```
 cd HelloWorld/shared-pom/
 
@@ -13,7 +14,7 @@ mvn deploy:deploy-file \
 
 ```
 
-Build and deploy the api proxy
+* Build and deploy the api proxy
 
 ```
 cd HelloWorld/
